@@ -1,74 +1,96 @@
-# Travel_Tide_CustomerSegmentation
-TravelTide – Behavioral Segmentation & Perk Recommendation
-TravelTide is a data analytics project that analyzes travel platform user behavior to identify meaningful customer segments and recommend personalized travel perks.
-The project applies exploratory data analysis, dimensionality reduction, and clustering techniques to group users into six distinct traveler profiles. Each segment receives a targeted perk recommendation designed to increase booking conversion and improve customer experience.
-The project demonstrates how data-driven segmentation can support personalized marketing strategies in the travel industry.
-________________________________________
- Key Features
- Exploratory Data Analysis to understand user behavior
- Data cleaning and preprocessing
-Dimensionality reduction using Principal Component Analysis (PCA)
-Customer segmentation using KMeans clustering
-Perk recommendation strategy tailored to each segment
-Actionable insights for personalized marketing strategies
-________________________________________
-Project Objectives
-Understand behavioral patterns among travel platform users.
-Identify distinct traveler segments based on booking behavior.
-Use machine learning techniques to validate customer segmentation.
-Develop a perk recommendation strategy tailored to different traveler types.
-________________________________________
-Techniques & Tools
-SQL
-Data extraction and preprocessing
-Python
-Data manipulation and analysis
-Jupyter Notebook
-Exploratory analysis workflow
-Machine Learning Methods
-•	PCA (Principal Component Analysis) for dimensionality reduction
-•	KMeans clustering for segmentation
-Python libraries used:
-•	pandas
-•	numpy
-•	matplotlib
-•	seaborn
-•	scikit-learn
-________________________________________
-Data Analysis Workflow
-The analysis followed four main steps.
-Data Cleaning
-Before the analysis, the dataset was cleaned and prepared.
-Key steps included:
-•	handling missing values
-•	removing inconsistencies
-•	preparing variables for analysis
-•	ensuring data quality
-________________________________________
-Exploratory Data Analysis (EDA)
-Exploratory analysis was conducted to understand the dataset and identify important behavioral patterns.
-This included:
-•	examining travel patterns
-•	analyzing booking behavior
-•	exploring engagement patterns
-•	identifying relationships between variables
-________________________________________
-Dimensionality Reduction (PCA)
-To simplify the dataset and reduce complexity, Principal Component Analysis (PCA) was applied.
-PCA helped:
-•	reduce the number of variables
-•	highlight the most important behavioral patterns
-•	improve clustering performance
-________________________________________
-Customer Segmentation (KMeans)
-After dimensionality reduction, KMeans clustering was used to segment users into distinct traveler groups.
-The algorithm identified six clusters representing different travel behaviors.
-________________________________________
-Summary of Traveler Segments
-Group	Traveler Type	Behavior Insight	Recommended Perk
-1	Long Distance Travelers	High value trips, long travel distances	Exclusive Discount
-2	Opportunity Bookers	Highly deal-driven, low loyalty	Strategy testing
-3	Long Stay Travelers	Longer trips with strong hotel focus	Free Hotel Meal
-4	Unremarkable Travelers	Standard booking behavior	Free Checked Bags
-5	Indecisive Travelers	High browsing activity, low conversion	Free Cancellation
-6	Business Travelers	Frequent efficiency-focused travel	1 Free Night Hotel with Flight
+## Execution Order
+
+To reproduce the full analysis, the files should be executed in the following order.
+
+### 1. Data Extraction (SQL)
+
+**File:** `Data_Extract.sql`
+
+This script extracts the relevant user and booking data from the database.  
+It prepares the raw dataset that will be used for the subsequent Python analysis.
+
+---
+
+### 2. Data Preprocessing
+
+**Notebook:** `preprocessing.ipynb`
+
+Main tasks:
+- loading the extracted dataset
+- cleaning the data
+- handling missing values
+- preparing variables for further analysis
+
+Output: a cleaned dataset ready for exploration.
+
+---
+
+### 3. Exploratory Data Analysis (EDA)
+
+**Notebook:** `data_exploration.ipynb`
+
+Main tasks:
+- exploring travel behavior patterns
+- analyzing booking activity
+- identifying initial patterns and relationships in the data
+- visualizing key variables
+
+---
+
+### 4. Detecting Canceled Trips
+
+**Notebook:** `detecting_canceled_trips.ipynb`
+
+Main tasks:
+- identifying canceled trips in the dataset
+- analyzing cancellation behavior
+- preparing cancellation-related variables for later analysis
+
+---
+
+### 5. Feature Engineering
+
+**Notebook:** `feature_engineering.ipynb`
+
+Main tasks:
+- creating behavioral features
+- aggregating user booking statistics
+- transforming variables for machine learning models
+
+Output: a feature-rich dataset prepared for dimensionality reduction.
+
+---
+
+### 6. Dimensionality Reduction (PCA)
+
+**Notebook:** `pca.ipynb`
+
+Main tasks:
+- scaling the dataset
+- applying Principal Component Analysis (PCA)
+- reducing dimensionality
+- identifying the most important behavioral components
+
+---
+
+### 7. Customer Segmentation
+
+**Notebook:** `kmeans.ipynb`
+
+Main tasks:
+- applying KMeans clustering
+- identifying the optimal number of clusters
+- assigning users to traveler segments
+
+---
+
+### 8. Cluster Analysis and Interpretation
+
+**Notebook:** `clusteranalysis.ipynb`
+
+Main tasks:
+- interpreting the resulting clusters
+- identifying behavioral traveler profiles
+- linking clusters to targeted perk recommendations
+
+Output: six traveler segments with personalized perk strategies.
